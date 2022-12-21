@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="static/js/nunjucks.js"></script>
+    <script>
+      $(document).ready( function() {
+       nunjucks.configure('static/templates/', { autoescape: true });
+       nunjucks.render('index.njk', {images:'static/images', js:'static/js', css:'static/css', templates:'static/templates'}, function(err, res) {
+      $("#main_content").html(res)
+      if (err)
+        {
+          $("#main_content").html(err)}
+      
+    });
+ });
+   </script>
+    <body id="main_content" class="px-2">
+  </body>
+  
+</html>
