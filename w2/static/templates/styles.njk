@@ -1,0 +1,83 @@
+
+#content-page {
+padding-top:5vh;
+}
+.cover-workshop
+{
+    height:35vh;
+    background-image: url({{images}}/banner-image.jpeg); 
+    background-position-y:40% ; 
+    opacity: .89; 
+    background-size: cover;
+    
+}
+.cover-name {
+    background-color: rgba(0,0,0,0.9);
+    
+}
+
+/* Alignment styles for images, videos and iframes in editable regions */
+@font-face {
+    font-family: 'icon';
+    src: url('http://cdn.jsdelivr.net/contenttools/1.2.4/icons.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ce-element--drop:before {
+    background-image: url('http://cdn.jsdelivr.net/contenttools/1.2.4/images/drop-vert-above.svg');
+}
+.ce-element--drop-left:before, 
+.ce-element--drop-right:before {
+    background-image: url('http://cdn.jsdelivr.net/contenttools/1.2.4/images/drop-horz.svg');
+}
+.ce-element--drop.ce-element--type-table-row {
+    background-image: url('http://cdn.jsdelivr.net/contenttools/1.2.4/images/drop-vert-above.svg');
+}
+.ce-element--drop.ce-element--type-table-row.ce-element--drop-below {
+    background-image: url('http://cdn.jsdelivr.net/contenttools/1.2.4/images/drop-vert-below.svg');
+}
+
+.ce-element--type-video { 
+    background-image: url('http://cdn.jsdelivr.net/contenttools/1.2.4/images/video.svg'); 
+}
+/* Center (default) */
+[data-editable] iframe,
+[data-editable] image,
+[data-editable] [data-ce-tag=img],
+[data-editable] img,
+[data-editable] video {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+/* Left align */
+[data-editable] .align-left {
+    clear: initial;
+    float: left;
+    margin-right: 0.5em;
+}
+
+/* Right align */
+[data-editable].align-right {
+    clear: initial;
+    float: right;
+    margin-left: 0.5em;
+}
+
+/* Alignment styles for text in editable regions */
+[data-editable] .text-center {
+    text-align: center;
+}
+
+[data-editable] .text-left {
+    text-align: left;
+}
+
+[data-editable] .text-right {
+    text-align: right;
+}
+​
