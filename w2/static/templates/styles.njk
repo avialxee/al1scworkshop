@@ -2,6 +2,50 @@
 #content-page {
 padding-top:5vh;
 }
+.container-workshop {
+  position: relative;
+  
+}
+{# use with container-workshop #}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 2px;
+  right: 10px;
+}
+.bottom-right-bg {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index:-2;
+}
+.sticker {
+
+  width: 0px;
+  height: 0px;
+  border-style: inset;
+  border-width: 0vw 0vw 4em 10em;
+  border-color: transparent transparent #001529 transparent;
+  
+}
+
 .cover-workshop
 {
     height:50vh;
@@ -13,7 +57,7 @@ padding-top:5vh;
     
 }
 .cover-name {
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0.6);
     
 }
 .nav-link {
@@ -30,4 +74,47 @@ padding-top:5vh;
 }
 .social:hover{
  color:#97bef9;   
+}
+
+{# gridding #}
+
+grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.33%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
 }
