@@ -28,6 +28,7 @@ $(document).on("click", "a", function(){
       $('ul li a').removeClass('active');
       selected_class=$(this).attr("href").toLowerCase().replace("#","");
       $('#'+selected_class.charAt(0).toUpperCase()+selected_class.slice(1)).addClass('active'); // finding the id which starts with capital letter
+
       $("#content-page").removeClass();
       $("#content-page").addClass(selected_class);
       if (selected_class) {
@@ -38,15 +39,18 @@ $(document).on("click", "a", function(){
 
 });
 
-
 </script>
 
 <div class="ms-2 me-2 ">
 
+{# {% include 'about-me.html' %} #}
     <div id="content-page" class="">
         <div id="about" class="d-block"></div>
+        <div id="dates" class="d-none"></div>
         <div id="scientific" class="d-none"></div>
+        <div id="poster" class="d-none"></div>
         <div id="local" class="d-none"></div>
+        <div id="contact" class="d-none"></div>
         <div id="registration" class="d-none"></div>
         <div id="program" class="d-none"></div>
         <div id="participants" class="d-none"></div>

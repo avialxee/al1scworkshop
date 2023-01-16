@@ -1,0 +1,40 @@
+<div id="poster" class="text-center">
+<img 
+src="{{images}}/al1sc_w3.jpg" 
+data-original="{{images}}/al1sc_w3.png" 
+alt="Workshop Poster" class="poster"></div>
+<br>
+<div class="text-center">
+    <span>Download : </span><strong><a href="{{images}}/al1sc_w3.png" download>png</a> <a href="{{images}}/al1sc_w3.pdf" download>pdf</a> </strong>
+</div>
+<!-- script for viewerjs -->
+
+<script type="module">
+
+
+// View an image.
+const viewer = new Viewer(document.getElementById('poster'), {
+  inline: false,
+  url: 'data-original',
+  navbar:false,
+
+  toolbar: {
+    zoomIn: 4,
+    zoomOut: 4,
+    oneToOne: 4,
+    reset: 4,
+    rotateLeft: 4,
+    rotateRight: 4,
+    
+  },
+  viewed() {
+    viewer.zoomTo(0.09);
+  },
+});
+// Then, show the image by clicking it, or call `viewer.show()`.
+
+// View a list of images.
+// Note: All images within the container will be found by calling `element.querySelectorAll('img')`.
+// const gallery = new Viewer(document.getElementById('images'));
+// Then, show one image by click it, or call `gallery.show()`.
+</script>
